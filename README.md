@@ -1,6 +1,6 @@
 # Sockethook
 
-Sockethook is a Webhook->Websocket proxy written in Go. It's designed for building real-time applications around third-party APIs which provide Webhooks. Sockethook could for example be used to create a live feed of [Github](https://developer.github.com/webhooks/) deployments or a real-time view of [Shopify](https://help.shopify.com/api/reference/events/webhook) orders.
+Sockethook is a Webhook-to-WebSocket proxy written in Go. It's designed for building real-time applications around third-party APIs which provide Webhooks. Sockethook could for example be used to create a live feed of [Github](https://developer.github.com/webhooks/) deployments or a real-time view of [Shopify](https://help.shopify.com/api/reference/events/webhook) orders.
 
 ## Usage
 
@@ -8,14 +8,14 @@ Sockethook is written in Go and can be installed by running
 
 `$ go get github.com/fabianlindfors/sockethook`
 
-The tool is then started with
+The tool is started with
 
 ```
 $ sockethook
 INFO[0000] Sockethook is ready and listening ✅
 ```
 
-Sockethook is now ready to start receiving Webhooks! Websockets can be connected through `/socket` followed by the endpoint to which you want to subscribe, for example: `/socket/order/created`. Any Webhook requests sent to `/hook/order/created` will now be broadcast to all subscribers listening to the specific endpoint.
+Sockethook is now ready to start receiving Webhooks! WebSockets can be connected through `/socket` followed by the endpoint to which you want to subscribe, for example: `/socket/order/created`. Any Webhook requests sent to `/hook/order/created` will now be broadcast to all subscribers listening to the specific endpoint.
 
 The broadcasted message will be JSON encoded and contain information about the Webhook request. The following is an example message from a Shopify Webhook:
 
