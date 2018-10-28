@@ -12,7 +12,7 @@ The tool is started with
 
 ```
 $ sockethook
-INFO[0000] Sockethook is ready and listening ✅
+INFO[0000] Sockethook is ready and listening at port 1234 ✅
 ```
 
 Sockethook is now ready to start receiving Webhooks! WebSockets can be connected through `/socket` followed by the endpoint to which you want to subscribe, for example: `/socket/order/created`. Any Webhook requests sent to `/hook/order/created` will now be broadcast to all subscribers listening to the specific endpoint.
