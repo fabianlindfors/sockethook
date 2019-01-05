@@ -72,6 +72,10 @@ $ sockethook --port 8000
 $ sockethook --address 127.0.0.1
 ```
 
+## Authentication
+
+Sockethook doesn't include any authentication meaning all endpoints and sockets are publicly available by default. The recommended way to add authentication is to use a reverse proxy or similar, which lends a lot of flexibility. Examples include [nginx](https://www.nginx.com), [Caddy](https://caddyserver.com), and [Traefik](https://traefik.io).
+
 ## License
 
 Sockethook is licensed under [MIT](https://github.com/fabianlindfors/sockethook/blob/master/LICENSE).
