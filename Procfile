@@ -1,1 +1,1 @@
-web: bin/sockethook
+web: bin/sockethook --port $PORT
