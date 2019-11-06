@@ -19,7 +19,7 @@ Sockethook is now ready to start receiving Webhooks! WebSockets can be connected
 
 The broadcasted message will be JSON encoded and contain information about the Webhook request. The following is an example message from a Shopify Webhook:
 
-```json
+```javascript
 {
   "headers": {
     "Accept": "*\/*",
@@ -75,6 +75,10 @@ $ sockethook --address 127.0.0.1
 ## Authentication
 
 Sockethook doesn't include any authentication meaning all endpoints and sockets are publicly available by default. The recommended way to add authentication is to use a reverse proxy or similar, which lends a lot of flexibility. Examples include [nginx](https://www.nginx.com), [Caddy](https://caddyserver.com), and [Traefik](https://traefik.io).
+
+## Deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## License
 
