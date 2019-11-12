@@ -1,5 +1,7 @@
 # Sockethook
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 Sockethook is a Webhook-to-WebSocket proxy written in Go. It's designed for building real-time applications around third-party APIs which provide Webhooks. Sockethook could for example be used to create a live feed of [Github](https://developer.github.com/webhooks/) deployments or a real-time view of [Shopify](https://help.shopify.com/api/reference/events/webhook) orders.
 
 ## Usage
@@ -75,10 +77,6 @@ $ sockethook --address 127.0.0.1
 ## Authentication
 
 Sockethook doesn't include any authentication meaning all endpoints and sockets are publicly available by default. The recommended way to add authentication is to use a reverse proxy or similar, which lends a lot of flexibility. Examples include [nginx](https://www.nginx.com), [Caddy](https://caddyserver.com), and [Traefik](https://traefik.io).
-
-## Deploy
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## License
 
