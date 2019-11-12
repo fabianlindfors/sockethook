@@ -104,6 +104,7 @@ func main() {
 	address := flag.String("address", "", "Address to bind to.")
 	port := flag.Int("port", 1234, "Port to bind to. Default: 1234")
 	flag.Parse()
+	upgrader.CheckOrigin = func(r *http.Request) bool { return true }
 
 	http.HandleFunc("/", handler)
 

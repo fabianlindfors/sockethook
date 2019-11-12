@@ -1,5 +1,7 @@
 # Sockethook
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 Sockethook is a Webhook-to-WebSocket proxy written in Go. It's designed for building real-time applications around third-party APIs which provide Webhooks. Sockethook could for example be used to create a live feed of [Github](https://developer.github.com/webhooks/) deployments or a real-time view of [Shopify](https://help.shopify.com/api/reference/events/webhook) orders.
 
 ## Usage
@@ -19,7 +21,7 @@ Sockethook is now ready to start receiving Webhooks! WebSockets can be connected
 
 The broadcasted message will be JSON encoded and contain information about the Webhook request. The following is an example message from a Shopify Webhook:
 
-```json
+```javascript
 {
   "headers": {
     "Accept": "*\/*",
